@@ -2,7 +2,7 @@
    <footer>
        <div class="container">
            <div>
-               <img src="" alt="">
+               <img :src="LogoIcon" alt="">
                <div class="contact">
                    <div>Call Us</div>
                    <div>8801828307745</div>
@@ -13,8 +13,13 @@
 </template>
 
 <script>
+    import LogoIcon from '../../assets/images/logo.png'
     export default {
-
+        data() {
+            return {
+                LogoIcon
+            }
+        },
     }
 </script>
 

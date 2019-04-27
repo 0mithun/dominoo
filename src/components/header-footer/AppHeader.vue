@@ -5,8 +5,11 @@
                <img :src="LogoIcon" alt="">
            </div>
             <div class="nav">
-                <img :src="MenuIcon" alt="">
+                <img :src="MenuIcon" alt="" @click="showSidePanel= !showSidePanel">
             </div>
+            <md-drawer class="side-drawer" :md-right="true" :md-active.sync="showSidePanel">
+
+            </md-drawer>
         </div>
     </header>
 </template>
@@ -18,7 +21,8 @@
         data() {
             return {
                 LogoIcon,
-                MenuIcon
+                MenuIcon,
+                showSidePanel:false
             }
         },
     }
